@@ -7,11 +7,17 @@
         input[type=text] { padding: 10px; width: 200px; margin: 5px; }
         input[type=submit] { padding: 10px 20px; }
         .result { margin-top: 20px; font-size: 20px; color: green; }
-        .container { background: white; padding: 30px; border-radius: 10px; display: inline-block; }
+        .container { background: white; padding: 30px; border-radius: 10px; display: inline-block; position: relative; }
+        .logout { position: absolute; top: 10px; right: 10px; }
+        .logout a { text-decoration: none; color: red; font-weight: bold; }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="logout">
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+
         <h2>FLAMES Relationship Calculator</h2>
         <form method="POST">
             <input type="text" name="name1" placeholder="Enter First Name" required><br>
