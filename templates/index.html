@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FLAMES Calculator</title>
+    <style>
+        body { font-family: Arial; background-color: #f2f2f2; padding: 20px; text-align: center; }
+        input[type=text] { padding: 10px; width: 200px; margin: 5px; }
+        input[type=submit] { padding: 10px 20px; }
+        .result { margin-top: 20px; font-size: 20px; color: green; }
+        .container { background: white; padding: 30px; border-radius: 10px; display: inline-block; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>FLAMES Relationship Calculator</h2>
+        <form method="POST">
+            <input type="text" name="name1" placeholder="Enter First Name" required><br>
+            <input type="text" name="name2" placeholder="Enter Second Name" required><br>
+            <input type="submit" value="Calculate">
+        </form>
+
+        {% if result %}
+            <div class="result">{{ result }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
